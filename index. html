@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Happy Birthday Sagar! 💖</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(135deg, #0d1b2a, #1b263b, #415a77);
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+      overflow-x: hidden;
+      position: relative;
+    }
+
+    /* Falling Hearts Animation */
+    .bg-animation {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .heart {
+      position: absolute;
+      color: #ff4d6d;
+      font-size: 20px;
+      animation: float 6s linear infinite;
+      opacity: 0.7;
+    }
+
+    @keyframes float {
+      0% { transform: translateY(100vh) rotate(0deg); opacity: 1; }
+      100% { transform: translateY(-10vh) rotate(360deg); opacity: 0; }
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    /* Header */
+    header {
+      margin-top: 20px;
+      margin-bottom: 30px;
+    }
+
+    h1 {
+      font-size: 2.8rem;
+      color: #ff758c;
+      text-shadow: 0 0 15px rgba(255, 117, 140, 0.8);
+      letter-spacing: 1px;
+    }
+
+    .song-quote {
+      font-style: italic;
+      font-size: 1.2rem;
+      color: #e0e1dd;
+      margin-top: 10px;
+      background: rgba(255, 255, 255, 0.1);
+      padding: 10px 20px;
+      border-radius: 20px;
+      display: inline-block;
+      backdrop-filter: blur(5px);
+    }
+
+    /* Gallery Section */
+    .gallery-title {
+      margin: 30px 0 15px 0;
+      font-size: 1.5rem;
+      color: #ff8fa3;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      margin-bottom: 40px;
+    }
+
+    .gallery img {
+      width: 220px;
+      height: 220px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 3px solid #ff758c;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+      transition: all 0.4s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.08) rotate(2deg);
+      border-color: #ffffff;
+      box-shadow: 0 15px 30px rgba(255, 117, 140, 0.9);
+    }
+
+    /* Interactive Cards */
+    .cards-section {
+      margin: 40px 0;
+    }
+
+    .card-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.08);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 117, 140, 0.3);
+      border-radius: 15px;
+      padding: 20px;
+      width: 90%;
+      max-width: 500px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      background: rgba(255, 117, 140, 0.2);
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(255, 117, 140, 0.4);
+    }
+
+    .card h3 {
+      color: #ff8fa3;
+      margin-bottom: 5px;
+    }
+
+    /* Music Box */
+    .music-box {
+      background: rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      border-radius: 20px;
+      margin: 30px auto;
+      max-width: 400px;
+      border: 1px solid #ff758c;
+    }
+
+    audio {
+      width: 100%;
+      margin-top: 10px;
+    }
+
+    /* Special Footer Message */
+    .secret-signature {
+      margin-top: 50px;
+      padding: 20px;
+      font-size: 1.3rem;
+      color: #ff758c;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="bg-animation" id="bgAnimation"></div>
+
+  <div class="content">
+    <header>
+      <h1>✨ Happy Birthday, Sagar! ✨</h1>
+      <div class="song-quote">
+        🎵 "ओ नील गगन के दीवाने, तू प्यार न मेरा पहचाने..." 🎵
+      </div>
+    </header>
+
+    <div class="music-box">
+      <p>🎧 Press play for your special vibe 🎵</p>
+      <audio controls>
+        <source src="song.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+
+    <h2 class="gallery-title">📸 Some Memories...</h2>
+    <div class="gallery">
+      <img src="photo1.jpg" alt="Sagar">
+      <img src="photo2.jpg" alt="Sagar">
+      <img src="photo3.jpg" alt="Sagar">
+    </div>
+
+    <div class="cards-section">
+      <h2 class="gallery-title">💌 Tap to reveal secret notes...</h2>
+      <div class="card-grid">
+        
+        <div class="card" onclick="alert('तुमचा हसरा चेहरा असाच नेहमी राहू दे! वाढदिवसाच्या खूप खूप शुभेच्छा! ✨')">
+          <h3>💌 Secret Note #1</h3>
+          <p>Click to open...</p>
+        </div>
+
+        <div class="card" onclick="alert('तुम्हाला आयुष्यात जे काही हवे आहे ते सर्व मिळो, हीच प्रार्थना! 🌟')">
+          <h3>✨ Secret Note #2</h3>
+          <p>Click to open...</p>
+        </div>
+
+        <div class="card" onclick="alert('कदाचित तुम्हाला ठाऊक नसेल, पण कुणीतरी नेहमी तुमच्या आनंदासाठी प्रार्थना करत असतं... 🤫')">
+          <h3>🔒 Special Confession</h3>
+          <p>Click to unlock...</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="secret-signature">
+      <p>With endless silent prayers & wishes... ❤️</p>
+      <p style="font-size: 0.9rem; color: #bbb; margin-top: 5px;">— From Your Secret Lover 😉</p>
+    </div>
+  </div>
+
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.classList.add('heart');
+      heart.innerHTML = '❤️';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.style.animationDuration = Math.random() * 3 + 3 + 's';
+      document.getElementById('bgAnimation').appendChild(heart);
+
+      setTimeout(() => {
+        heart.remove();
+      }, 6000);
+    }
+
+    setInterval(createHeart, 300);
+  </script>
+
+</body>
+</html>
